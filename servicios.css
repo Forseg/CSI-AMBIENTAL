@@ -1,0 +1,75 @@
+body {
+    background-color: #f0f8eb;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.navbar-nav .nav-link:hover {
+    background-color:rgb(16, 225, 117); 
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    font-weight: bold; 
+}
+
+/* Estilos de los íconos */
+.nav-link img {
+    width: 20px;
+    height: auto; 
+    margin-right: 5px; 
+}
+
+.header-image {
+    height: 350px;
+    background-image: url('servicios/arboles.jpg'); 
+    background-size: 100% 100%; 
+    background-position: top; 
+    background-repeat: no-repeat;
+
+}
+
+.about-section2, h2 {
+    color: white;
+    margin-top: 100px; 
+    text-align: center;
+    background-color: black;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; 
+}
+
+.social-icons a img {
+    width: 30px;
+    height: auto;
+}
+
+
+.social-icons img:hover {
+    transform: scale(1.1);  
+}
+
+
+.service-icon {
+    width: 40px; 
+    height: 40px;
+    margin-right: px;
+    vertical-align: middle;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+}
+
+
+h1{
+    text-align: center;
+}

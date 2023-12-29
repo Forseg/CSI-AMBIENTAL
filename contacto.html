@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="perfil.jpg" type="image/x-icon">
+  <title>Contactanos</title>
+  <link rel="stylesheet" href="contacto.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="perfil.jpg" alt="" width="35" height="30" class="d-inline-block align-text-top">
+          CSI AMBIENTAL
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">
+                <img src="Imagenes/inicio.png" alt="Inicio Icono"> Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="nosotros.html">
+                <img src="Imagenes/nosotros.png" alt="Nosotros Icono"> Nosotros
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="servicios.html">
+                <img src="Imagenes/servicio.png" alt="Servicios Icono"> Nuestros Servicios
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contacto.html">
+                <img src="Imagenes/contacto.png" alt="Contacto Icono"> Contacto
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex" id="searchForm">
+            <input class="form-control me-2" type="search" id="searchInput" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+        </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="header-image">
+  </div>
+
+  <div class="contenedor">
+    <h1>Contactanos</h1>
+    <form onsubmit="enviarAWhatsApp(); return false;">
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required><br>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required><br>
+
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" required><br>
+
+      <label for="ruc">RUC:</label>
+      <input type="text" id="ruc" name="ruc" required><br>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required><br>
+
+      <label for="ciudad">Ciudad:</label>
+      <select id="ciudad" name="ciudad" required onchange="actualizarDistritos()">
+        <option value="Ancash">Áncash</option>
+        <option value="Apurimac">Apurímac</option>
+        <option value="Arequipa">Arequipa</option>
+        <option value="Ayacucho">Ayacucho</option>
+        <option value="Cajamarca">Cajamarca</option>
+        <option value="Callao">Callao</option>
+        <option value="Cusco">Cusco</option>
+        <option value="Huancavelica">Huancavelica</option>
+        <option value="Huanuco">Huánuco</option>
+        <option value="Ica">Ica</option>
+        <option value="Junin">Junín</option>
+        <option value="LaLibertad">La Libertad</option>
+        <option value="Lambayeque">Lambayeque</option>
+        <option value="Lima">Lima</option>
+        <option value="Loreto">Loreto</option>
+        <option value="MadredeDios">Madre de Dios</option>
+        <option value="Moquegua">Moquegua</option>
+        <option value="Pasco">Pasco</option>
+        <option value="Piura">Piura</option>
+        <option value="Puno">Puno</option>
+        <option value="SanMartin">San Martín</option>
+        <option value="Tacna">Tacna</option>
+        <option value="Tumbes">Tumbes</option>
+        <option value="Ucayali">Ucayali</option>
+      </select><br><br>
+
+      <label for="distrito">Distrito/Provincia:</label>
+      <select id="distrito" name="distrito" required>
+      </select><br><br>
+
+      <label><strong>Seleccione lo que desea que te ayudemos:</strong></label><br>
+      <input type="checkbox" id="opcion1" name="opcion1" value="Opción 1"> Almacenamiento de Residuos
+      <br>
+      <input type="checkbox" id="opcion2" name="opcion2" value="Opción 2"> Barrido<br>
+      <input type="checkbox" id="opcion3" name="opcion3" value="Opción 3"> Recolección y Transporte<br>
+      <input type="checkbox" id="opcion4" name="opcion4" value="Opción 4"> Transferencia<br>
+      <input type="checkbox" id="opcion5" name="opcion5" value="Opción 5"> Reaprovechamiento<br>
+      <input type="checkbox" id="opcion6" name="opcion6" value="Opción 6"> Disposición Final
+      <br><br>
+
+      <input type="submit" value="Enviar">
+      <input type="button" value="Eliminar datos" onclick="limpiarFormulario()">
+
+    </form>
+  </div>
+
+  <div class="mapa">
+    <H2>Envíos a nivel nacional Perú-Lima-Provincias</H2>
+    <br>
+    <div class="iframe-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249744.04473483688!2d-77.1525879367552!3d-12.026254179013614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2sLima!5e0!3m2!1ses-419!2spe!4v1703167884624!5m2!1ses-419!2spe"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+
+  <div class="about-section2">
+    <h2>Síguenos y mándanos un mensaje</h2>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/CSIAMBIENTAL" target="_blank">
+        <img src="Imagenes_Nosotros/chat/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.linkedin.com/company/csi-ambiental/" target="_blank">
+        <img src="Imagenes_Nosotros/chat/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/csiambiental/" target="_blank">
+        <img src="Imagenes_Nosotros/chat/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://twitter.com/CsiAmbiental" target="_blank">
+        <img src="Imagenes_Nosotros/chat/twiter.png" alt="Twiter">
+      </a>
+      <a href="https://t.me/CSIAmbiental" target="_blank">
+        <img src="Imagenes_Nosotros/chat/telegrama.png" alt="Telegram">
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=51933296787&text=Hola%20quisiera%20mas%20informaci%C3%B3n" target="_blank">
+        <img src="Imagenes_Nosotros/chat/whatsapp.png" alt="Whatsapp">
+      </a>
+    </div>
+  </div>
+
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="contacto.js"></script>
+  <script src=""></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
